@@ -66,7 +66,7 @@
       </div>
       <div class="card hero">
         <h2>不是只背答案，而是把每題拆成可遷移的知識。</h2>
-        <p>目前已整理 ${KNOW.length} 個核心知識點。每道原題答完後會連到相關文法、敬語方向、固定搭配、商務詞彙與閱讀策略，再由系統生成延伸題反覆抽問。</p>
+        <p>目前已整理 ${KNOW.length} 個核心知識點。每道原題答完後會連到相關文法、敬語方向、固定搭配、商務詞彙與閱讀策略，再用針對同一考點設計的應用題、近義辨析與情境題反覆抽問。</p>
         <div class="quick-actions">
           <button class="btn primary" data-start="mixed">開始綜合 30 題</button>
           <button class="btn" data-start="original">重刷全部原題</button>
@@ -112,7 +112,7 @@
     if(!session){
       root.innerHTML=`<div class="section-title"><div><h2>選擇刷題方式</h2><p>原題先打底，延伸題負責把知識變成真正會用。</p></div></div><div class="grid mode-grid">
         ${modeCard('original','原題重現','完整題組','本串題目與等價文字版原題型。')}
-        ${modeCard('extension','知識點延伸','隨機抽題','從 71 個知識點自動衍生意思題與例句題。')}
+        ${modeCard('extension','知識點延伸','隨機抽題','71 個知識點皆有針對性延伸題；干擾選項限定在同一語義／文法範圍。')}
         ${modeCard('mixed','綜合混合','日常模式','原題 + 延伸題混合。')}
         ${modeCard('weak','弱點集中',`${weakQuestions().length} 題`,'只練最近答錯、錯多於對、或手動標記的題。')}
         ${modeCard('due','間隔複習',`${dueQuestions().length} 題`,'到期題集中複習。')}
@@ -127,6 +127,7 @@
       <div class="card practice-panel">
         <div class="practice-head"><span class="q-number">第 ${session.index+1} / ${session.ids.length} 題 · ${esc(q.category)}</span><span class="q-source">${esc(q.source)}</span></div>
         <div class="progress"><i style="width:${pct(session.index,session.ids.length)}%"></i></div>
+        ${q.passage?`<div class="reading-passage"><div class="reading-passage-head"><span>閱讀文章</span><small>請先讀完整前文，再回答下方問題</small></div><div class="reading-passage-text">${esc(q.passage)}</div></div>`:''}
         <div class="stem">${esc(q.stem)}</div>
         <div class="options">${currentPrepared.preparedOptions.map((o,i)=>`<button class="option" data-opt="${i}"><span class="key">${i+1}</span><span>${esc(o.text)}</span></button>`).join('')}</div>
         <div id="feedback"></div>

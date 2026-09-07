@@ -25,3 +25,10 @@ nav{display:grid;gap:8px}.nav-btn{border:0;background:transparent;color:#d1d5db;
 .toast{position:fixed;right:22px;bottom:22px;background:#111827;color:white;padding:11px 14px;border-radius:10px;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s;z-index:30}.toast.show{opacity:1;transform:translateY(0)}
 @media(max-width:1000px){.app-shell{grid-template-columns:1fr}.sidebar{position:fixed;z-index:20;left:-280px;width:260px;transition:.2s}.sidebar.open{left:0}.icon-btn{display:block}.stats-grid{grid-template-columns:repeat(2,1fr)}.mode-grid{grid-template-columns:1fr 1fr}.practice-layout{grid-template-columns:1fr}.knowledge-grid{grid-template-columns:1fr}.settings-grid{grid-template-columns:1fr}.topbar{padding:18px 18px 8px}.view{padding:14px 18px 40px}}
 @media(max-width:620px){.stats-grid,.mode-grid{grid-template-columns:1fr}.topbar h1{font-size:21px}.topbar p{font-size:13px}.stem{font-size:19px}.card{padding:16px}.view{padding-left:12px;padding-right:12px}.top-actions{display:none}}
+
+/* Reading-comprehension source text */
+.reading-passage{margin:18px 0 8px;border:1px solid var(--line);border-radius:16px;background:#fbfbfc;overflow:hidden}
+.reading-passage-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:11px 14px;border-bottom:1px solid var(--line);background:#f4f5f7}
+.reading-passage-head span{font-weight:750;font-size:14px}.reading-passage-head small{color:var(--muted);font-size:12px}
+.reading-passage-text{padding:18px 18px 20px;white-space:pre-wrap;line-height:1.9;font-size:16px;color:#252b35;max-height:520px;overflow:auto}
+@media(max-width:620px){.reading-passage-head{align-items:flex-start;flex-direction:column;gap:3px}.reading-passage-text{padding:15px;font-size:15px;max-height:none}}
