@@ -32,3 +32,15 @@ nav{display:grid;gap:8px}.nav-btn{border:0;background:transparent;color:#d1d5db;
 .reading-passage-head span{font-weight:750;font-size:14px}.reading-passage-head small{color:var(--muted);font-size:12px}
 .reading-passage-text{padding:18px 18px 20px;white-space:pre-wrap;line-height:1.9;font-size:16px;color:#252b35;max-height:520px;overflow:auto}
 @media(max-width:620px){.reading-passage-head{align-items:flex-start;flex-direction:column;gap:3px}.reading-passage-text{padding:15px;font-size:15px;max-height:none}}
+
+/* v4: option-level explanations */
+.main-explain{margin-top:14px;padding:14px 16px;border-radius:12px;background:#f8f9fb;border:1px solid var(--line)}
+.main-explain>b{display:block;margin-bottom:6px}.main-explain p{margin:0}
+.wrong-choice-explain{margin:14px 0;padding:15px 16px;border-radius:14px;border:1px solid #efb2ad;background:#fff7f6}
+.wrong-choice-title{font-weight:800;margin-bottom:8px;color:#8f2620}.wrong-reason-tag{display:inline-block;font-size:12px;font-weight:750;border:1px solid #e4aaa5;border-radius:999px;padding:4px 8px;margin-bottom:8px;background:white;color:#9b312a}
+.wrong-choice-explain p{margin:0;line-height:1.75;color:#4a2522}
+.detail-actions{margin-top:14px}.all-choice-details{display:grid;gap:10px;margin-top:12px}.all-choice-details[hidden]{display:none}
+.choice-detail{border:1px solid var(--line);border-radius:13px;padding:13px 14px;background:white}.choice-detail.is-correct{border-color:#9bcda8;background:#f4fbf6}.choice-detail.is-wrong{background:#fcfcfd}
+.choice-detail-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.choice-no{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:var(--soft);font-weight:800}.choice-detail-head strong{flex:1;min-width:140px}.choice-badge{font-size:11px;font-weight:750;border-radius:999px;padding:4px 7px;background:#f0f1f3;color:#565d69}.choice-detail.is-correct .choice-badge{background:#dff3e5;color:#216a36}
+.choice-detail p{margin:9px 0 0;line-height:1.72;color:#404754;font-size:14px}
+@media(max-width:620px){.wrong-choice-explain,.main-explain{padding:13px}.choice-detail{padding:12px}.choice-detail-head strong{min-width:110px}}
