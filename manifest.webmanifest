@@ -1,0 +1,9 @@
+{
+  "name": "BJT 深度學習刷題",
+  "short_name": "BJT刷題",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#111827",
+  "description": "以 BJT 原題與延伸知識點建立的商務日語刷題 App"
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="description" content="BJT 商務日語深度學習刷題 App" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>BJT 深度學習刷題</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">B</div>
+        <div><strong>BJT 深度學習</strong><small>商務日語刷題系統</small></div>
+      </div>
+      <nav>
+        <button class="nav-btn active" data-view="dashboard">總覽</button>
+        <button class="nav-btn" data-view="practice">刷題</button>
+        <button class="nav-btn" data-view="knowledge">知識庫</button>
+        <button class="nav-btn" data-view="mistakes">錯題簿</button>
+        <button class="nav-btn" data-view="settings">設定 / 備份</button>
+      </nav>
+      <div class="sidebar-foot">
+        <small>資料來源：本串 BJT 題目 + 延伸知識點</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn" aria-label="開啟選單">☰</button>
+        <div><h1 id="pageTitle">總覽</h1><p id="pageSubtitle">用原題建立知識網，再用延伸題反覆鞏固。</p></div>
+        <div class="top-actions"><span class="pill" id="todayStat">今日 0 題</span></div>
+      </header>
+
+      <section id="view-dashboard" class="view active"></section>
+      <section id="view-practice" class="view"></section>
+      <section id="view-knowledge" class="view"></section>
+      <section id="view-mistakes" class="view"></section>
+      <section id="view-settings" class="view"></section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <input id="importFile" type="file" accept="application/json" hidden />
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
