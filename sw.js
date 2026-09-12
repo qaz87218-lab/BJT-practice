@@ -1,5 +1,5 @@
-const CACHE='bjt-deep-v4';
-const ASSETS=['./','./index.html','./styles.css','./data.js','./option_details.js','./app.js','./manifest.webmanifest'];
+const CACHE='bjt-deep-v10';
+const ASSETS=["./","./index.html","./styles.css","./data.js","./option_details.js","./article_details.js","./business_course.js","./app.js","./manifest.webmanifest"];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});
 self.addEventListener('activate',e=>e.waitUntil(Promise.all([
   caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))),
