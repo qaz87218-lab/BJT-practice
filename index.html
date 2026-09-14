@@ -18,7 +18,10 @@
       </div>
       <nav>
         <button class="nav-btn active" data-view="dashboard">總覽</button>
+        <button class="nav-btn" data-view="system">📚 系統學習 <span class="nav-new">NEW</span></button>
         <button class="nav-btn" data-view="practice">刷題</button>
+        <button class="nav-btn" data-view="battle">⚔️ BJT BATTLE <span class="nav-new">NEW</span></button>
+        <button class="nav-btn" data-view="titles">🏆 稱號殿堂 <span class="nav-new">NEW</span></button>
         <button class="nav-btn" data-view="knowledge">知識庫</button>
         <button class="nav-btn" data-view="articles">文章詳解</button>
         <button class="nav-btn" data-view="business">💼 實用商務 <span class="nav-new">NEW</span></button>
@@ -38,7 +41,10 @@
       </header>
 
       <section id="view-dashboard" class="view active"></section>
+      <section id="view-system" class="view"></section>
       <section id="view-practice" class="view"></section>
+      <section id="view-battle" class="view"></section>
+      <section id="view-titles" class="view"></section>
       <section id="view-knowledge" class="view"></section>
       <section id="view-articles" class="view"></section>
       <section id="view-business" class="view"></section>
@@ -48,12 +54,16 @@
   </div>
 
   <div id="toast" class="toast" role="status"></div>
+  <div id="gameOverlay" class="game-overlay" aria-live="polite"></div>
+  <div id="questionMapModal" class="modal-backdrop" hidden></div>
   <input id="importFile" type="file" accept="application/json" hidden />
 
   <script src="data.js"></script>
   <script src="option_details.js"></script>
   <script src="article_details.js"></script>
   <script src="business_course.js"></script>
+  <script src="lessons.js"></script>
+  <script src="game_data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
