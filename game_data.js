@@ -1,5 +1,5 @@
 window.BJT_GAME_CONFIG = {
-  version: '12.0',
+  version: '12.2',
   mainTitles: [
     {level:1,name:'言境初醒者',desc:'剛踏入語言世界。'},
     {level:5,name:'語紋學徒',desc:'開始辨識語言規則留下的紋理。'},
