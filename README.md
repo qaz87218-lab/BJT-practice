@@ -120,3 +120,12 @@ python -m http.server 8000
 - 新增學習 EXP：首次答對、錯題復仇、到期複習、課程閱讀、Quick Check、文章學習、完整題組與 Boss Clear 均有對應獎勵；同一題的「首次答對 EXP」不可重複刷取。
 - 舊 v11 使用者升級後會依既有作答與課程進度進行一次性 v12 EXP 遷移，保留原本 localStorage key `bjtDeepStateV1`。
 - Service Worker cache 更新為 v12，並新增 `game_data.js`。
+
+
+## 2026-09-14 v12.1：稱號防劇透
+- 所有尚未取得的主位階名稱在介面統一顯示為 `????`，只保留解鎖 Level。
+- 所有尚未取得的特殊異名統一顯示為 `????`，並隱藏描述、稀有度與來源分類，取得後才揭曉。
+- Boss 未擊破前不顯示專屬擊破異名。
+- 首頁「下一位階」不再預告稱號名稱。
+- 已取得稱號、升級／解鎖演出與裝備功能維持不變。
+- Service Worker cache 更新為 `bjt-deep-v12-1`。
